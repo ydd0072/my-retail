@@ -11,7 +11,7 @@ class RemoteProductClientSpec extends Specification {
     RestTemplate restTemplate = Mock(RestTemplate)
 
     def setup() {
-        remoteProductClient = new RemoteProductClient(restTemplate)
+        this.remoteProductClient = new RemoteProductClient(restTemplate)
     }
 
     void 'constructor - #message'() {

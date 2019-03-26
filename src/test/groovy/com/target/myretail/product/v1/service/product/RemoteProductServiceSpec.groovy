@@ -47,6 +47,5 @@ class RemoteProductServiceSpec extends Specification {
         1 * remoteProductClient.getProduct('13860428') >> new ApiResponse()
         1 * remoteResponseToProductConverter.convert(_) >> new Product()
         1 * priceService.getPrice('13860428') >> new Price()
-
     }
 }
