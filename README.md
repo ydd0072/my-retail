@@ -13,11 +13,11 @@ Product service uses a [Caffeine in-memory cache](https://github.com/ben-manes/c
 
 GET /products/{id}
 
-Get the product information (including current price) for a given product
+Get the product information (including current price) for a given product.
 
 PUT /products/{id}
 
-Update the price for the given product
+Update the price for the given product.
 
 For full details on the request / response parameters as well as a live api, try out the instance below.
 
