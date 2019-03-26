@@ -53,7 +53,6 @@ Please run the Gradle `bootRun` command to run the API and run local Redis (or c
 
 ## Future Improvements
 
-Given more time, I will do below things.
 1) Security for PUT needs to added.
 2) Global exception handling and some missing validations e.g. currency.
 3) Redis Sentinel for real prod and security around it.
