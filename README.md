@@ -19,7 +19,7 @@ PUT /products/{id}
 
 Update the price for the given product
 
-For full details on the request / response parameters as well as a live api, try out the instance below that includes a Swagger UI.
+For full details on the request / response parameters as well as a live api, try out the instance below.
 
 ## Available online
 
