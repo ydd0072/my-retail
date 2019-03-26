@@ -48,7 +48,14 @@ Use the included Gradle wrapper `gradlew` to automatically download the version 
 
 The code ships with API functionality tests covered with Postman integration tests as well as some unit tests which covers variety of scenarios on both endpoints. 
 The tests are located in the `src/test/` folder.
-Please run the Gradle `bootRun` command to run the API and run local Redis (or connect to remote Redis) and import `my-retail-api.postman_collection.json` in Postman and execute all of the integration tests. 
+Please run the Gradle `bootRun` command to run the API and run local Redis (or connect to remote Redis) and import `my-retail-api.postman_collection.json` in Postman and execute all of the integration tests.
+
+## Future Improvements
+
+Given more time, I will do below things.
+1) Security for PUT needs to added.
+2) Global exception handling and some missing validations e.g. currency.
+3) Redis Sentinel for real prod and security around it.
 
 
 
