@@ -1,0 +1,419 @@
+{
+	"info": {
+		"_postman_id": "1396da09-8827-47c4-b24b-ddccac211894",
+		"name": "my-retail-api",
+		"description": "My retail api integration test cases.",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get Status 200",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "83bdded9-cb87-4906-9389-d310483e01c6",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"",
+							"pm.test(\"Product Id should be 13860428\", function () {",
+							"    var jsonData = pm.response.json();",
+							"    pm.expect(jsonData.id).to.eql(\"13860428\");",
+							"});",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/vnd.my.retail-v1+json",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8080/products/id/13860428",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"products",
+						"id",
+						"13860428"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Put Status 200",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "8ef946e5-3825-4ace-97ef-4dcc2a16ae24",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"",
+							"pm.test(\"Product price should be 9.99\", function () {",
+							"    var jsonData = pm.response.json();",
+							"    var jsonData = JSON.parse(responseBody);",
+							"    pm.expect(jsonData.current_price.value).to.eql(9.99);",
+							"});",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/vnd.my.retail-v1+json",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"current_price\": {\n        \"value\": 9.99,\n        \"currency_code\": \"USD\"\n    }\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/products/id/13860428",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"products",
+						"id",
+						"13860428"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Status 404",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "504e520c-41e6-436f-9e7a-d17af001b089",
+						"exec": [
+							"pm.test(\"Status code is 404\", function () {",
+							"    pm.response.to.have.status(404);",
+							"});",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/vnd.my.retail-v1+json",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8080/products/id/13860491",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"products",
+						"id",
+						"13860491"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Put Status 404",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "98d6b78f-5441-4069-b0f3-c19aeeed7a48",
+						"exec": [
+							"pm.test(\"Status code is 404\", function () {",
+							"    pm.response.to.have.status(404);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/vnd.my.retail-v1+json",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"current_price\": {\n        \"value\": 99.09,\n        \"currency_code\": \"USD\"\n    }\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/products/id/13860493",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"products",
+						"id",
+						"13860493"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get No Product Id",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "64c285d9-3969-4c56-8a8b-a53d44cebe95",
+						"exec": [
+							"pm.test(\"Status code is 404\", function () {",
+							"    pm.response.to.have.status(404);",
+							"});",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/vnd.my.retail-v1+json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8080/products/id/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"products",
+						"id",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Put No Product Id",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "4691b5c2-1f2b-4610-9c9b-8032a7f41c6f",
+						"exec": [
+							"pm.test(\"Status code is 404\", function () {",
+							"    pm.response.to.have.status(404);",
+							"});",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/vnd.my.retail-v1+json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"current_price\": {\n        \"value\": 9.99,\n        \"currency_code\": \"USD\"\n    }\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/products/id/?=",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"products",
+						"id",
+						""
+					],
+					"query": [
+						{
+							"key": "",
+							"value": ""
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Put Invalid Request - No Amount",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "cdc398eb-49ad-4774-8023-5144f6176e8e",
+						"exec": [
+							"pm.test(\"Status code is 400\", function () {",
+							"    pm.response.to.have.status(400);",
+							"});",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/vnd.my.retail-v1+json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"current_price\": {\n        \"currency_code\": \"USD\"\n    }\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/products/id/13860428",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"products",
+						"id",
+						"13860428"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Put Invalid Request - No USD",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/vnd.my.retail-v1+json",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"current_price\": {\n        \"value\": 9.99\n    }\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/products/id/13860428",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"products",
+						"id",
+						"13860428"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
