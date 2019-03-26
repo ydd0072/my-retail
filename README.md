@@ -2,7 +2,7 @@
 
 ## Restful API
 
-Welcome to myRetail's latest technology achievement, a Restful API giving you and your colleagues and easy access to our product data.
+Welcome to myRetail's latest technology achievement, a Restful API giving you and your colleagues an easy access to our product data.
 
 ## Architecture
 The API is built with [Spring Boot](https://spring.io/projects/spring-boot), a high performing framework to deliver production grade applications.
