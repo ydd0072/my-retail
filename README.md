@@ -7,7 +7,7 @@ Welcome to myRetail's latest technology achievement, a Restful API giving you an
 ## Architecture
 The API is built with [Spring Boot](https://spring.io/projects/spring-boot), a high performing framework to deliver production grade applications.
 The product pricing data is stored in [Redis](https://redis.io/), a super-fast and a rock-solid NoSQL datastore to deliver data in O(1) time. 
-And the product service uses a [Caffeine in-memory cache](https://github.com/ben-manes/caffeine) to save time and network bandwidth when repeated data is fetched over network for the same products.
+Product service uses a [Caffeine in-memory cache](https://github.com/ben-manes/caffeine) to save time and network bandwidth when repeated data is fetched over network for the same products.
 
 ## Endpoints
 
