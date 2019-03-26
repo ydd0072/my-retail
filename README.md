@@ -36,9 +36,10 @@ Or if you're running on Windows, you can install Redis with the Microsoft port a
 
 Mac users only - Start up Redis using command `redis-server` on the default port of 6379 and redis will be available to read/write.
 Please use any Redis UI for key/value data validations. I prefer [Medis](https://github.com/luin/medist).  
+
 If you want to run on a different port or use a Redis instance running elsewhere besides `localhost`, you can customize this by setting the value in the `spring.redis.url` variable in application.properties file.
 
-Then run the Gradle `boorRun` task to generate the Swagger UI and start up the server. 
+Then run the Gradle `bootRun` task to generate the Swagger UI and start up the server. 
 Use the included Gradle wrapper `gradlew` to automatically download the version of Gradle included with this project.
 
 1. `./gradlew bootRun`
