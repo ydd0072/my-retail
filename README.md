@@ -35,7 +35,7 @@ If you're on a Mac, you can easily install Redis with brew by running `brew inst
 Or if you're running on Windows, you can install Redis with the Microsoft port available at https://github.com/MicrosoftArchive/redis/releases
 
 Mac users only - Start up Redis using command `redis-server` on the default port of 6379 and redis will be available to read/write.
-Please use any Redis UI for key/value data validations. I prefer [Medis](https://github.com/luin/medist).  
+Please use any Redis UI for key/value data validations. I prefer [Medis](https://github.com/luin/medis).  
 
 If you want to run on a different port or use a Redis instance running elsewhere besides `localhost`, you can customize this by setting the value in the `spring.redis.url` variable in application.properties file.
 
