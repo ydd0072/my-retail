@@ -38,7 +38,7 @@ If you want to run on a different port or use a Redis instance running elsewhere
 Then run the Gradle `boorRun` task to generate the Swagger UI and start up the server. 
 Use the included Gradle wrapper `gradlew` to automatically download the version of Gradle included with this project.
 
-1. `./gradlew run`
+1. `./gradlew bootRun`
 2. Swagger available at http://localhost:8080/swagger-ui.html
 
 ## Test Cases
