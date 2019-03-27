@@ -15,8 +15,7 @@ import org.springframework.web.client.RestTemplate;
 public class RestTemplatesConfig {
 
     @Bean
-    public RestTemplate myRetailServiceTemplate() {
-
+    public RestTemplate restTemplate() {
         PoolingHttpClientConnectionManager poolingHttpClientConnectionManager = new PoolingHttpClientConnectionManager();
         CloseableHttpClient httpClient = HttpClients.custom()
                 .setKeepAliveStrategy(DefaultConnectionKeepAliveStrategy.INSTANCE)
