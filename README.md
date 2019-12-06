@@ -52,10 +52,10 @@ The test cases are located in the `src/test/` folder.
 Please run the Gradle `bootRun` command to run the API and run local Redis (or connect to remote Redis) and import `my-retail-api.postman_collection.json` in [Postman](https://www.getpostman.com/downloads/) and execute all of the integration tests.
 
 ## Future Improvements
-
-1) Security for PUT needs to added.
-2) Global exception handling and some missing validations e.g. currency.
-3) Redis Sentinel for real prod and security around it.
+1) Add service APM
+2) Security for PUT needs to added.
+3) Global exception handling and some missing validations e.g. currency.
+4) Redis Sentinel for real prod and security around it.
 
 
 
