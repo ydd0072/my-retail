@@ -23,10 +23,10 @@ For full details on the request / response parameters as well as a live api, try
 
 ## Available online
 
-You can try out an example GET request with https://morning-citadel-49305.herokuapp.com/products/id/13860429
+You can try out an example GET request with https://my-retail-demo.herokuapp.com/products/id/13860429
 
 ## Application Health Check & Metrics
-You can view application parameter live at https://morning-citadel-49305.herokuapp.com/actuator/
+You can view application parameter live at https://my-retail-demo.herokuapp.com/actuator/
 
 ## Running locally
 
