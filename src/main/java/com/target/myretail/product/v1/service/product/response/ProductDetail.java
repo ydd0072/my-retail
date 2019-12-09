@@ -1,12 +1,8 @@
 package com.target.myretail.product.v1.service.product.response;
 
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.Data;
 
-@NoArgsConstructor
-@Setter
-@Getter
+@Data
 public class ProductDetail {
     private String title;
 }

@@ -1,14 +1,10 @@
 package com.target.myretail.product.v1.domain;
 
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.Data;
 
 import javax.validation.Valid;
 
-@NoArgsConstructor
-@Getter
-@Setter
+@Data
 public class Product {
     private String id;
     @Valid

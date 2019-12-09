@@ -1,13 +1,9 @@
 package com.target.myretail.product.v1.service.product.response;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.Data;
 
-@NoArgsConstructor
-@Setter
-@Getter
+@Data
 public class ItemResponse {
     @JsonProperty("tcin")
     private String id;

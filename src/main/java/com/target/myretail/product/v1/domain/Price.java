@@ -1,18 +1,14 @@
 package com.target.myretail.product.v1.domain;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.Data;
 
 import javax.validation.Valid;
 import javax.validation.constraints.DecimalMin;
 import javax.validation.constraints.NotNull;
 import java.math.BigDecimal;
 
-@NoArgsConstructor
-@Getter
-@Setter
+@Data
 public class Price {
     @JsonProperty("currency_code")
     @NotNull(message = "current_code is required")

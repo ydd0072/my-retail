@@ -1,7 +1,7 @@
 {
 	"info": {
-		"_postman_id": "1396da09-8827-47c4-b24b-ddccac211894",
-		"name": "my-retail-api",
+		"_postman_id": "a5c987c4-b130-4765-9e82-25b94fcf5e40",
+		"name": "my-retail-api copy",
 		"description": "My retail api integration test cases.",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
@@ -42,12 +42,8 @@
 						"type": "text"
 					}
 				],
-				"body": {
-					"mode": "raw",
-					"raw": ""
-				},
 				"url": {
-					"raw": "http://localhost:8080/products/id/13860428",
+					"raw": "http://localhost:8080/products/13860428",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -55,7 +51,6 @@
 					"port": "8080",
 					"path": [
 						"products",
-						"id",
 						"13860428"
 					]
 				}
@@ -104,7 +99,7 @@
 					"raw": "{\n    \"current_price\": {\n        \"value\": 9.99,\n        \"currency_code\": \"USD\"\n    }\n}"
 				},
 				"url": {
-					"raw": "http://localhost:8080/products/id/13860428",
+					"raw": "http://localhost:8080/products/13860428",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -112,7 +107,6 @@
 					"port": "8080",
 					"path": [
 						"products",
-						"id",
 						"13860428"
 					]
 				}
@@ -150,12 +144,8 @@
 						"type": "text"
 					}
 				],
-				"body": {
-					"mode": "raw",
-					"raw": ""
-				},
 				"url": {
-					"raw": "http://localhost:8080/products/id/13860491",
+					"raw": "http://localhost:8080/products/13860491",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -163,7 +153,6 @@
 					"port": "8080",
 					"path": [
 						"products",
-						"id",
 						"13860491"
 					]
 				}
@@ -205,7 +194,7 @@
 					"raw": "{\n    \"current_price\": {\n        \"value\": 99.09,\n        \"currency_code\": \"USD\"\n    }\n}"
 				},
 				"url": {
-					"raw": "http://localhost:8080/products/id/13860493",
+					"raw": "http://localhost:8080/products/13860493",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -213,7 +202,6 @@
 					"port": "8080",
 					"path": [
 						"products",
-						"id",
 						"13860493"
 					]
 				}
@@ -251,12 +239,8 @@
 						"type": "text"
 					}
 				],
-				"body": {
-					"mode": "raw",
-					"raw": ""
-				},
 				"url": {
-					"raw": "http://localhost:8080/products/id/",
+					"raw": "http://localhost:8080/products/",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -264,7 +248,6 @@
 					"port": "8080",
 					"path": [
 						"products",
-						"id",
 						""
 					]
 				}
@@ -307,7 +290,7 @@
 					"raw": "{\n    \"current_price\": {\n        \"value\": 9.99,\n        \"currency_code\": \"USD\"\n    }\n}"
 				},
 				"url": {
-					"raw": "http://localhost:8080/products/id/?=",
+					"raw": "http://localhost:8080/products/?=",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -315,7 +298,6 @@
 					"port": "8080",
 					"path": [
 						"products",
-						"id",
 						""
 					],
 					"query": [
@@ -364,7 +346,7 @@
 					"raw": "{\n    \"current_price\": {\n        \"currency_code\": \"USD\"\n    }\n}"
 				},
 				"url": {
-					"raw": "http://localhost:8080/products/id/13860428",
+					"raw": "http://localhost:8080/products/13860428",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -372,7 +354,6 @@
 					"port": "8080",
 					"path": [
 						"products",
-						"id",
 						"13860428"
 					]
 				}
@@ -400,7 +381,7 @@
 					"raw": "{\n    \"current_price\": {\n        \"value\": 9.99\n    }\n}"
 				},
 				"url": {
-					"raw": "http://localhost:8080/products/id/13860428",
+					"raw": "http://localhost:8080/products/13860428",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -408,12 +389,12 @@
 					"port": "8080",
 					"path": [
 						"products",
-						"id",
 						"13860428"
 					]
 				}
 			},
 			"response": []
 		}
-	]
+	],
+	"protocolProfileBehavior": {}
 }

@@ -24,7 +24,7 @@ public class ProductController {
     }
 
     @ResponseBody
-    @RequestMapping(path = "/id/{id}", method = RequestMethod.GET)
+    @RequestMapping(path = "/{id}", method = RequestMethod.GET)
     public Product getProduct(
             @PathVariable String id
     ) {
@@ -32,8 +32,8 @@ public class ProductController {
     }
 
     @ResponseBody
-    @RequestMapping(path = "/id/{id}", method = RequestMethod.PUT)
-    public Product updateProductPrice(
+    @RequestMapping(path = "/{id}", method = RequestMethod.PUT)
+    public Product setProductPrice(
             @PathVariable String id,
             @Valid @RequestBody Product productRequest
     ) {

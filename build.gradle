@@ -6,11 +6,14 @@ buildscript {
 	}
 	dependencies {
 		classpath "org.springframework.boot:spring-boot-gradle-plugin:2.1.3.RELEASE"
+		classpath("org.asciidoctor:asciidoctor-gradle-plugin:1.5.3")
 	}
 }
 
 plugins {
 	id 'groovy'
+	id "com.github.michaelruocco.gradle-postman-runner" version "0.1.0"
+	id "org.asciidoctor.convert" version "1.5.9.2"
 }
 
 apply plugin: "org.springframework.boot"
@@ -19,6 +22,7 @@ apply plugin: 'eclipse'
 apply plugin: 'idea'
 apply plugin: 'org.springframework.boot'
 apply plugin: 'io.spring.dependency-management'
+apply plugin: 'org.asciidoctor.convert'
 
 dependencyManagement {
 	imports {
@@ -30,6 +34,10 @@ dependencyManagement {
 version = '0.0.1-SNAPSHOT'
 sourceCompatibility = JavaVersion.VERSION_1_8
 targetCompatibility = JavaVersion.VERSION_1_8
+
+ext {
+	snippetsDir = file('build/generated-snippets')
+}
 
 repositories {
 	mavenCentral()
@@ -46,6 +54,8 @@ dependencies {
 	compile('io.springfox:springfox-swagger2:2.9.2')
 	compile('io.springfox:springfox-swagger-ui:2.9.2')
 	compile('org.apache.httpcomponents:httpclient')
+	compile('io.micrometer:micrometer-registry-prometheus')
+	asciidoctor 'org.springframework.restdocs:spring-restdocs-asciidoctor'
 	compileOnly 'org.projectlombok:lombok'
 	compileOnly("org.projectlombok:lombok:1.16.10")
 	implementation 'org.springframework.boot:spring-boot-starter-data-redis'
@@ -54,3 +64,34 @@ dependencies {
 	testCompile('org.spockframework:spock-spring:1.1-groovy-2.4')
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 }
+
+ext {
+	buildTime = new Date().format("yyyyMMddHHmm")
+	snippetsDir = file('build/generated-snippets')
+}
+
+test {
+	outputs.dir snippetsDir
+}
+
+asciidoctor {
+	inputs.dir snippetsDir
+	dependsOn test
+}
+
+bootJar {
+	dependsOn asciidoctor
+	from ("${asciidoctor.outputDir}/html5") {
+		into 'static/docs'
+	}
+}
+
+asciidoctor {
+	dependsOn test
+	inputs.dir snippetsDir
+	sourceDir = file('src/docs')
+	separateOutputDirs = false
+	attributes 'snippets': snippetsDir
+}
+
+build.dependsOn asciidoctor
