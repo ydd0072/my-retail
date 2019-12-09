@@ -51,6 +51,9 @@ The code ships with API functionality tests covered with Postman integration tes
 The test cases are located in the `src/test/` folder.
 Please run the Gradle `bootRun` command to run the API and run local Redis (or connect to remote Redis) and import `my-retail-api.postman_collection.json` in [Postman](https://www.getpostman.com/downloads/) and execute all of the integration tests.
 
+Postman test can be run via executing postman gradle task, before that please install newman which add node module to project.
+`npm install -g newman`
+
 ## Future Improvements
 1) Add Service APM
 2) Security for PUT needs to added.
